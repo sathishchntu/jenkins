@@ -2,6 +2,7 @@ package com.cicd.jenkins;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -12,6 +13,7 @@ public class JenkinsApplication {
 		SpringApplication.run(JenkinsApplication.class, args);
 	}
 
+	@GetMapping("/get/message")
 	public String getMessage(){
 		return "welcome Jenkins";
 	}
